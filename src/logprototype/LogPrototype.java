@@ -9,6 +9,7 @@ import java.awt.Button;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Label;
+import java.awt.TextArea;
 import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -38,19 +39,12 @@ public class LogPrototype extends Applet implements ActionListener{
     /*This is the arrangement of Components that allows for easy management 
      * of the applet*/
     
-    private Component[] loginSheet = new Component[]{new Label("UserName:"),
-        new TextField(10),new Label("Password:"),new TextField(10),
-        new Button("login")};
-    private Component[] signupSheet= new Component[]{new Label("UserName:"),
-        new TextField(10),new Label("Email:"),new TextField(10),
-        new Label("Password:"),new TextField(10),
-        new Label("Confirm Password:"),new TextField(10),
-        new Button("Create Account")};
-    private Component[] enterSheet = new Component[]{};
-    private Component[] reviewSheet= new Component[]{};
-    private Component[] calculationSheet = new Component[]{};
-    private Component[][] master= new Component[][]{loginSheet,signupSheet,enterSheet,
-                                        reviewSheet,calculationSheet};
+    private Component[] loginSheet;
+    private Component[] signupSheet;
+    private Component[] enterSheet ;
+    private Component[] reviewSheet;
+    private Component[] calculationSheet;
+    private Component[][] master;
     /*Used to move between sheets easily*/
     private int sheetIndex=0;
     /**
@@ -58,6 +52,27 @@ public class LogPrototype extends Applet implements ActionListener{
      */
     @Override
     public void init(){
+        /*Initilizes components to various values (TextFields are place holders*/
+        loginSheet = new Component[]{new Label("UserName:"),
+        new TextField(10),new Label("Password:"),new TextField(10),
+        new Button("login")};
+        signupSheet= new Component[]{new Label("UserName:"),
+        new TextField(10),new Label("Email:"),new TextField(10),
+        new Label("Password:"),new TextField(10),
+        new Label("Confirm Password:"),new TextField(10),
+        new Button("Create Account")};
+        enterSheet= new Component[]{new Label("Date"),new TextField(10),
+        new Label("Miles"),new TextField(10), new Label("Time"),new TextField(10),
+        new Label("Notes"),new TextField(10),new Label("Sleep"),new TextField(10),
+        new Label("Soreness"),new TextField(10),new Label("Shoe"),new TextField(10)};
+        reviewSheet= new Component[]{new Label("Date"),new TextArea(10,10),
+        new Label("Miles"),new TextArea(10,10), new Label("Time"),new TextArea(10,10),
+        new Label("Notes"),new TextArea(10,10),new Label("Sleep"),new TextArea(10,10),
+        new Label("Soreness"),new TextArea(10,10),new Label("Shoe"),new TextArea(10,10)};
+        calculationSheet = new Component[]{};
+        master= new Component[][]{loginSheet,signupSheet,enterSheet,
+                                        reviewSheet,calculationSheet};
+        
         for(Button b:testHelperButtons){add(b);b.addActionListener(this);}
         for(Component[] cA:master){
             for(Component c:cA){
