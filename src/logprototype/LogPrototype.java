@@ -58,8 +58,7 @@ public class LogPrototype extends Applet implements ActionListener{
         new TextField(10),new Label("Password:"),new TextField(10),
         new Button("login")};
         signupSheet= new Component[]{new Label("UserName:"),
-        new TextField(10),new Label("Email:"),new TextField(10),
-        new Label("Password:"),new TextField(10),
+        new TextField(10),new Label("Password:"),new TextField(10),
         new Label("Confirm Password:"),new TextField(10),
         new Button("Create Account")};
         enterSheet= new Component[]{new Label("Date"),new TextField(10),
