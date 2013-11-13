@@ -9,9 +9,10 @@ package logprototype;
  * @author reilly Noonan Grant
  * Assignment #22?
  * Creating a prototype in java of the web based application that me and 
- * Aaron Spak plan to build. This is the User interface of this prototype
+ * Aaron Spak plan to build. This is the User class of this prototype to help
+ * with Users and file storage
  */
-public class User {
+public abstract class User {
     private String password;
     private String userName;
     

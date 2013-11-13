@@ -10,7 +10,7 @@ package logprototype;
  * Assignment #22?
  * Creating a prototype in java of the web based application that me and 
  * Aaron Spak plan to build. This is one of the most basic units designed to 
- * store all the information one entry in a logbook
+ * store all the information of one entry in a logbook
  */
 public class Entry {
     private double miles;
